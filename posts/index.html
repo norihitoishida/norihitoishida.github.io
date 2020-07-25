@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+
+    <meta name="author" content="Norihito Ishida">
+    <meta name="description" content="Presentations    Date Title     2020/07/19 The Neural Process Family   2020/05/31 ELECTRA(Clark&#43;, 2020)    2020/04/13 分散表現, Attention, Self Attention, Transformer   2020/04/07 単語の分散表現(One-hot encode, word2vec, ELMo, BERT)   2020/02/03 NAS with Reinforcement Learning(Zoph and Le, 2017)   2019/11/11 NAS研究のベストプラクティス   2019/11/11 NASの歴史と現在の動向(Elsken&#43;, 2019)   2019/11/11 NAS-Bench-101(Ying&#43;, 2019)   2019/09/23 ASNG-NAS(Akimoto&#43;, 2019)    Technical notes    Date Title     2020/04/11 Jetson nanoのケースを3Dプリントする(Ubuntu 18.">
+    <meta name="keywords" content="blog,developer,personal">
+
+    
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="Presentations    Date Title     2020/07/19 The Neural Process Family   2020/05/31 ELECTRA(Clark&#43;, 2020)    2020/04/13 分散表現, Attention, Self Attention, Transformer   2020/04/07 単語の分散表現(One-hot encode, word2vec, ELMo, BERT)   2020/02/03 NAS with Reinforcement Learning(Zoph and Le, 2017)   2019/11/11 NAS研究のベストプラクティス   2019/11/11 NASの歴史と現在の動向(Elsken&#43;, 2019)   2019/11/11 NAS-Bench-101(Ying&#43;, 2019)   2019/09/23 ASNG-NAS(Akimoto&#43;, 2019)    Technical notes    Date Title     2020/04/11 Jetson nanoのケースを3Dプリントする(Ubuntu 18."/>
+
+    <meta property="og:title" content="" />
+<meta property="og:description" content="Presentations    Date Title     2020/07/19 The Neural Process Family   2020/05/31 ELECTRA(Clark&#43;, 2020)    2020/04/13 分散表現, Attention, Self Attention, Transformer   2020/04/07 単語の分散表現(One-hot encode, word2vec, ELMo, BERT)   2020/02/03 NAS with Reinforcement Learning(Zoph and Le, 2017)   2019/11/11 NAS研究のベストプラクティス   2019/11/11 NASの歴史と現在の動向(Elsken&#43;, 2019)   2019/11/11 NAS-Bench-101(Ying&#43;, 2019)   2019/09/23 ASNG-NAS(Akimoto&#43;, 2019)    Technical notes    Date Title     2020/04/11 Jetson nanoのケースを3Dプリントする(Ubuntu 18." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://norihitoishida.github.io/posts/" />
+
+
+
+    
+      <base href="https://norihitoishida.github.io/posts/">
+    
+    <title>
+   · Norihito Ishida&#39;s personal website
+</title>
+
+    
+      <link rel="canonical" href="https://norihitoishida.github.io/posts/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://norihitoishida.github.io/css/coder.min.3219ef62ae52679b7a9c19043171c3cd9f523628c2a65f3ef247ee18836bc90b.css" integrity="sha256-MhnvYq5SZ5t6nBkEMXHDzZ9SNijCpl8&#43;8kfuGINryQs=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+      <link rel="stylesheet" href="https://norihitoishida.github.io/css/custom.css" />
+    
+
+    
+
+    <link rel="icon" type="image/png" href="https://norihitoishida.github.io/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://norihitoishida.github.io/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.68.3" />
+  </head>
+
+  
+  
+  <body class="colorscheme-light"
+        onload=""
+  >
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://norihitoishida.github.io/">
+      Norihito Ishida&#39;s personal website
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://norihitoishida.github.io/about/">About</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://norihitoishida.github.io/posts/">Blog</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1></h1>
+    </header>
+
+    <h3 id="presentations">Presentations</h3>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Title</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2020/07/19</td>
+<td>The Neural Process Family</td>
+</tr>
+<tr>
+<td>2020/05/31</td>
+<td><a href="https://drive.google.com/file/d/1iov_bIT7z_1MUrO317a7rg6YHoDAM7Jv/view">ELECTRA(Clark+, 2020) </a></td>
+</tr>
+<tr>
+<td>2020/04/13</td>
+<td><a href="https://qiita.com/norihitoishida/items/2fead107792b504eaccf">分散表現, Attention, Self Attention, Transformer</a></td>
+</tr>
+<tr>
+<td>2020/04/07</td>
+<td><a href="https://qiita.com/norihitoishida/items/85150cfacc1f75f552f3">単語の分散表現(One-hot encode, word2vec, ELMo, BERT)</a></td>
+</tr>
+<tr>
+<td>2020/02/03</td>
+<td><a href="https://qiita.com/norihitoishida/items/41b517225c905606a363">NAS with Reinforcement Learning(Zoph and Le, 2017)</a></td>
+</tr>
+<tr>
+<td>2019/11/11</td>
+<td><a href="https://qiita.com/norihitoishida/items/a00c284d83d9d2278fdd">NAS研究のベストプラクティス</a></td>
+</tr>
+<tr>
+<td>2019/11/11</td>
+<td><a href="https://qiita.com/norihitoishida/items/9f73865a0c8f99c203cd">NASの歴史と現在の動向(Elsken+, 2019)</a></td>
+</tr>
+<tr>
+<td>2019/11/11</td>
+<td><a href="https://qiita.com/norihitoishida/items/44f10b5fa13f3c81b380">NAS-Bench-101(Ying+, 2019)</a></td>
+</tr>
+<tr>
+<td>2019/09/23</td>
+<td>ASNG-NAS(Akimoto+, 2019)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="technical-notes">Technical notes</h3>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Title</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2020/04/11</td>
+<td><a href="https://qiita.com/norihitoishida/items/e8626e10b72aa032ea8d">Jetson nanoのケースを3Dプリントする(Ubuntu 18.04)</a></td>
+</tr>
+<tr>
+<td>2020/04/09</td>
+<td><a href="https://qiita.com/norihitoishida/items/5eda6e7cbca8ac50bd8e">scikit-learnのモジュール全部説明する</a></td>
+</tr>
+<tr>
+<td>2020/04/01</td>
+<td><a href="https://qiita.com/norihitoishida/items/6d7c9a2494b62bfbe8ae">Deep learningのOptimizer早見表</a></td>
+</tr>
+<tr>
+<td>2019/11/20</td>
+<td><a href="https://qiita.com/norihitoishida/items/f16894504d398c121553">WEBのデータ通信入門まとめ(GET/POSTメソッド、Cookie、セッションID)</a></td>
+</tr>
+<tr>
+<td>2019/10/29</td>
+<td><a href="https://qiita.com/norihitoishida/items/0f7195b467cc3bcf5493">Jupyter Notebookで再現性を確保する10の方法</a></td>
+</tr>
+<tr>
+<td>2019/10/26</td>
+<td><a href="https://qiita.com/norihitoishida/items/664c18a575a34a945e64">Docker初心者未満向け</a></td>
+</tr>
+</tbody>
+</table>
+
+  </article>
+</section>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js" id="MathJax-script"></script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ['$', '$'], ['\\(', '\\)']
+        ],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+        ©
+        
+        2020
+         Norihito Ishida 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+    </section>
+  </footer>
+
+    </main>
+
+    
+
+    
+
+    
+
+  </body>
+
+</html>

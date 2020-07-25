@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>https://norihitoishida.github.io/posts/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://norihitoishida.github.io/categories/</loc>
   </url>
   
