@@ -21,14 +21,5 @@ I&amp;rsquo;m a machine learning engineer, data analyst, and ex-sheet metal engi
 Interests:  Factory Automation Machine Learning  Deep Learning Natural Language Processing Neural Processes Neural Architecture Search   Computer Science AtCoder  Languages  Japanese / English Python, C, C++, etc.  Education  Bachelor of Science in Mechanical Engineering, The University of Tokyo, 2011-2016  Affiliation  Deepcore Inc. (Kernel member) Breadhouse Seminar  Favorites  Jazz, Funk, R&amp;amp;B, Soul, Neo Soul, etc.</description>
     </item>
     
-    <item>
-      <title></title>
-      <link>https://norihitoishida.github.io/posts/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://norihitoishida.github.io/posts/</guid>
-      <description>Presentations    Date Title     2020/07/19 The Neural Process Family   2020/05/31 ELECTRA(Clark+, 2020)    2020/04/13 分散表現, Attention, Self Attention, Transformer   2020/04/07 単語の分散表現(One-hot encode, word2vec, ELMo, BERT)   2020/02/03 NAS with Reinforcement Learning(Zoph and Le, 2017)   2019/11/11 NAS研究のベストプラクティス   2019/11/11 NASの歴史と現在の動向(Elsken+, 2019)   2019/11/11 NAS-Bench-101(Ying+, 2019)   2019/09/23 ASNG-NAS(Akimoto+, 2019)    Technical notes    Date Title     2020/04/11 Jetson nanoのケースを3Dプリントする(Ubuntu 18.</description>
-    </item>
-    
   </channel>
 </rss>
